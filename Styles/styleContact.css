@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200;12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    transition: all 0.25s ease-out;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #00000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0000004b;
+}
+
+body {
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: 90px;
+    overflow-x: hidden;
+}
+
+.titles {
+    font-size: 40px;
+    margin: 20px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    padding: 0 10% 0 10%;
+    background: #ffffff54;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    transition: top 0.3s;
+}
+
+header .logo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    text-decoration: none;
+}
+
+header .logo img {
+    width: 50px;
+}
+
+header .logo p {
+    font-weight: 800;
+    color: #000;
+}
+
+header nav {
+    width: 45%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav a {
+    color: #000;
+    font-weight: 400;
+    margin: 10px;
+    text-decoration: none;
+}
+
+header nav .contact {
+    margin: 10px;
+    padding: 10px;
+    border: #000 2px solid;
+}
+
+#navMenuBtn {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #1e1e1e;
+    cursor: pointer;
+    display: none;
+}
+
+@media screen and (max-width: 1030px) {
+    #navMenuBtn {
+        display: block;
+        z-index: 3;
+    }
+
+    header nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        gap: 5%;
+        justify-content: center;
+        background-color: #0000004b;
+    }
+
+    header nav a {
+        font-size: 20px;
+        color: #fff;
+    }
+
+    header nav .contact {
+        border: #fff 2px solid;
+    }
+}
+
+.contactSection {
+    position: relative;
+    width: 95%;
+    margin: 20px;
+    padding: 100px 0 100px 0;
+    background-color: #ffffff54;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+.contactSection .info {
+    width: 300px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
+.contactSection .info h3 {
+    font-size: 25px;
+}
+
+.contactSection .info div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+}
+
+.contactSection .info div p {
+    margin: 10px;
+}
+
+.contactSection .contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+    width: 400px;
+}
+
+.contactSection .contactForm form {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contactSection .contactForm form label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 300;
+}
+
+.contactSection .contactForm form label span {
+    color: #d80000;
+    padding: 2px;
+}
+
+.contactSection .contactForm form input,
+.contactSection .contactForm form textarea {
+    width: 100%;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    outline: none;
+    background: none;
+    border: none;
+    border: 1px solid #000;
+}
+
+.contactSection .contactForm form button {
+    padding: 10px;
+    width: 100px;
+    background: none;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.contactSection .contactForm form textarea {
+    height: 150px;
+    resize: none;
+}
+
+#contactMessage {
+    position: fixed;
+    bottom: 5%;
+    padding: 15px;
+    background-color: #ffffffbb;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: 10px;
+    z-index: 99;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    display: none;
+}
+
+#contactMessage button {
+    border: none;
+    background: none;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    color: #222222;
+    cursor: pointer;
+}
+
+footer {
+    position: relative;
+    width: 98%;
+    margin: 20px;
+    padding: 30px;
+    background-color: #ffffff54;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    overflow: hidden;
+}
+
+footer .pages {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+footer .pages div {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+footer .pages div h4 {
+    margin: 5px;
+}
+
+footer .pages div a {
+    color: #000;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+footer .pages .contactInfo {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start !important;
+    overflow: hidden;
+}
+
+footer .pages .contactInfo div {
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+footer .pages .contactInfo div i {
+    margin: 10px;
+}
+
+footer .copyright {
+    margin-top: 40px;
+    opacity: 0.7;
+}
+
+@media screen and (max-width: 800px) {
+    .homeSection {
+        padding: 50px;
+        padding-bottom: 0px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .contactSection {
+        padding: 30px;
+    }
+
+    footer {
+        width: 95%;
+        margin-bottom: 10px;
+    }
+
+    footer .pages {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+    }
+
+    footer .copyright {
+        margin: 0;
+    }
+}
+
+.animated-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animated-section.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gradient1, .gradient2 {
+    position: absolute;
+    --size: 250px;
+    --speed: 50s;
+    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+    width: var(--size);
+    height: var(--size);
+    filter: blur(calc(var(--size) / 5));
+    background-image: linear-gradient(rgb(229, 231, 96), #b6e48b);
+    animation: rotate var(--speed) var(--easing) alternate infinite;
+    border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.gradient2 {
+    position: absolute;
+    top: 45%;
+}
+
+@media (min-width: 720px) {
+    .gradient1, .gradient2 {
+        --size: 500px;
+    }
+}
