@@ -28,29 +28,3 @@ navMenuBtn.addEventListener('click', function () {
     // Toggle scrollEnabled to enable/disable the scroll event
     scrollEnabled = !scrollEnabled;
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll(".animated-section");
-
-    function isInViewport(element, buffer = 500) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top >= -buffer &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) + buffer &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    function handleScroll() {
-        sections.forEach((section) => {
-            if (isInViewport(section)) {
-                section.classList.add("animate");
-            }
-        });
-    }
-
-    window.addEventListener("scroll", handleScroll);
-    // Initial check in case some sections are already in the viewport on page load
-    handleScroll();
-});
