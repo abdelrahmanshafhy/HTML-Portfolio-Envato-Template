@@ -352,16 +352,7 @@ footer .copyright {
     }
 }
 
-.animated-section {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.animated-section.animate {
-    opacity: 1;
-    transform: translateY(0);
-}
+/* Gradient Effect */
 
 .gradient1, .gradient2 {
     position: absolute;

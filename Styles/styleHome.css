@@ -330,44 +330,53 @@ header nav .contact {
     border: #000 1px solid;
 }
 
-.portfolioSection {
+.projectSection {
     position: relative;
     width: 95%;
+    height: auto;
+    padding: 20px;
     margin: 20px;
-    padding: 100px 0 100px 0;
     background-color: #ffffff54;
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
     border-radius: 20px;
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.projectSection .projects {
+    margin: 50px;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
-    overflow: hidden;
+    justify-content: center;
 }
 
-.portfolioSection .project {
-    margin: 20px;
+.projectSection .projects .project {
+    margin: 40px;
     width: 300px;
     height: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.projectSection .projects .project img {
+    width: 100%;
     box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0) 10px 10px 0px 0px;
 }
 
-.portfolioSection .project img {
-    width: 100%;
-}
 
-.portfolioSection .project .info {
+.projectSection .projects .project .info {
     position: relative;
-    background-color: white;
     width: 100%;
-    height: 30%;
-    padding: 8px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -375,13 +384,15 @@ header nav .contact {
     flex-wrap: nowrap;
 }
 
-.portfolioSection .project .info h3 {
+.projectSection .projects .project .info h3 {
     font-weight: 800;
+    margin: 5px 0 5px 0;
     font-style: normal;
 }
 
-.portfolioSection .project .info a {
+.projectSection .projects .project .info a {
     font-weight: 100;
+    margin: 5px 0 5px 0;
     color: #000;
 }
 
@@ -704,18 +715,9 @@ footer .copyright {
     }
 }
 
-.animated-section {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-}
+/* Gradient Effect */
 
-.animated-section.animate {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.gradient1, .gradient2, .gradient3 {
+.gradient1, .gradient2 {
     position: absolute;
     --size: 250px;
     --speed: 50s;
@@ -735,13 +737,8 @@ footer .copyright {
     top: 45%;
 }
 
-.gradient3 {
-    position: absolute;
-    top: 80%;
-}
-
 @media (min-width: 720px) {
-    .gradient1, .gradient2, .gradient3 {
+    .gradient1, .gradient2 {
         --size: 500px;
     }
 }
