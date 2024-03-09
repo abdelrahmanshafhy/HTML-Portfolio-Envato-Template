@@ -160,7 +160,7 @@ header nav .contact {
     align-items: flex-start;
     justify-content: space-around;
     width: 100%;
-    height: 500px;
+    min-height: 500px;
     padding: 20px;
 }
 
@@ -181,6 +181,7 @@ header nav .contact {
 
 .aboutSection .information .contactInfo div p {
     margin: 10px;
+    word-break: break-word;
 }
 
 .aboutSection .information .socialMedia h4 {
